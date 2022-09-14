@@ -1,0 +1,22 @@
+---
+title: "Plotly Graphic"
+author: "Juana Arroyo"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Ozone Measurements vs Temperature vs Wind
+```{r warning=FALSE, message=FALSE, fig.height=4, fig.width=6, fig.align='center'}
+library(plotly)
+set.seed(2016-07-21)
+data<-CO2
+plot_ly(airquality, x = ~Temp, y= ~Ozone , mode = "markers", color = ~Wind)
+```
+<font size="3">Data from the aiquality dataset: Daily air quality measurements in New York, May to September 1973.</font>
+
+
